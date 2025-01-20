@@ -1,0 +1,19 @@
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 54px;
+  border-radius: 10px;
+  font-family: var(--font);
+  font-weight: 900;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.active {
+  border: 2px solid var(--color-activo);
+  color: var(--color-activo);
+  background-color: var(--color-secundario);
+}

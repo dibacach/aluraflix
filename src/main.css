@@ -1,0 +1,15 @@
+:root {
+  --font: "Source Code Pro", sans-serif;
+  --fondo-principal: #262626;
+  --fondo-secundario: #000000;
+  --color-activo: #2271d1;
+  --color-inactivo: #ffffff;
+  --color-terciario: #d3d3d3;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

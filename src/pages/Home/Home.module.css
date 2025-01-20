@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  flex: 1;
+  background-color: var(--fondo-principal);
+  color: var(--color-inactivo);
+}

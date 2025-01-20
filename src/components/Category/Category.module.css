@@ -1,0 +1,35 @@
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+
+.category {
+  width: 350px;
+  height: 70px;
+  color: var(--color-inactivo);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 40px;
+}
+
+.title {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+@media (max-width: 400px) {
+  .cards {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+}

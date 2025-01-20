@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--fondo-secundario);
+  height: 120px;
+  border-bottom: 2px solid var(--color-activo);
+}
+
+.botonera {
+  display: flex;
+  direction: "row";
+  justify-content: "space-between";
+  align-items: "center";
+  padding: "10px";
+  margin-right: 45px;
+}
+
+.logo {
+  width: 168px;
+  height: 40px;
+  margin-left: 40px;
+}

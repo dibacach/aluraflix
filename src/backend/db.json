@@ -1,0 +1,53 @@
+{
+  "categorias": [
+    {
+      "id": "1",
+      "nombre": "Frontend",
+      "color": "#6BD1FF"
+    },
+    {
+      "id": "2",
+      "nombre": "Backend",
+      "color": "#00C86F"
+    },
+    {
+      "id": "3",
+      "nombre": "Innovación y Gestión",
+      "color": "#FFBA05"
+    }
+  ],
+  "videos": [
+    {
+      "id": "1",
+      "titulo": "Video 1",
+      "categoria": "1",
+      "imagen": "https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png",
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "descripcion": "Este es un video de prueba"
+    },
+    {
+      "id": "2",
+      "titulo": "Video 2",
+      "categoria": "2",
+      "imagen": "https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png",
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "descripcion": "Este es un video de prueba"
+    },
+    {
+      "id": "3",
+      "titulo": "Video 3",
+      "categoria": "3",
+      "imagen": "https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png",
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "descripcion": "Este es un video de prueba"
+    },
+    {
+      "id": "e5cb",
+      "titulo": "What is love",
+      "descripcion": "love!",
+      "imagen": "https://bvtack.com/wp-content/uploads/2019/02/WhatIsLove.p.png",
+      "video": "https://www.youtube.com/watch?v=HEXWRTEbj1I",
+      "categoria": "1"
+    }
+  ]
+}
