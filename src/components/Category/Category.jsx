@@ -8,8 +8,9 @@ export default function Category({ nombre, color, videos }) {
     border: `2px solid ${color}`,
     display: "flex",
     flexDirection: "column",
-    alignItems: "flex-start",
+    alignItems: "center",
   };
+
   return (
     <>
       <div className={styles.title}>
@@ -27,7 +28,6 @@ export default function Category({ nombre, color, videos }) {
 }
 
 Category.propTypes = {
-  //   id: PropTypes.string.isRequired,
   nombre: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   videos: PropTypes.array.isRequired,

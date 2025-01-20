@@ -1,13 +1,28 @@
 import { useState, useEffect, createContext } from "react";
 import PropTypes from "prop-types";
-import { getVideos, deleteVideo, createVideo } from "../components/api/api";
+import {
+  getVideos,
+  deleteVideo,
+  createVideo,
+  getCategorias,
+} from "../components/api/api";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const VideosContext = createContext();
 
 export default function VideoProvider({ children }) {
   const [videos, setVideos] = useState([]);
+  const [categorias, setCategorias] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const fetchCategorias = async () => {
+    try {
+      const data = await getCategorias();
+      setCategorias(data);
+    } catch (error) {
+      console.error("Error al obtener categorias", error);
+    }
+  };
 
   const fetchVideos = async () => {
     try {
@@ -22,6 +37,7 @@ export default function VideoProvider({ children }) {
 
   useEffect(() => {
     fetchVideos();
+    fetchCategorias();
   }, []);
 
   const agregarVideo = async (nuevoVideo) => {
@@ -42,6 +58,16 @@ export default function VideoProvider({ children }) {
     }
   };
 
+  const fetchCategoriaById = async (id) => {
+    try {
+      const data = await getCategorias();
+      const categoria = data.find((categoria) => categoria.id === id);
+      setCategorias((prevCategorias) => [...prevCategorias, categoria]);
+    } catch (error) {
+      console.error("Error al obtener categoria", error);
+    }
+  };
+
   return (
     <VideosContext.Provider
       value={{
@@ -51,6 +77,8 @@ export default function VideoProvider({ children }) {
         agregarVideo,
         fetchVideos,
         eliminarVideo,
+        categorias,
+        fetchCategoriaById,
       }}
     >
       {children}

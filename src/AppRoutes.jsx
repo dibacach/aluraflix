@@ -4,6 +4,7 @@ import VideoProvider from "./context/VideoContext";
 import Home from "./pages/Home/Home";
 import BasePage from "./pages/BasePage/BasePage";
 import NewVideo from "./pages/NewVideo/NewVideo";
+import NotFound from "./pages/NotFound/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "nuevo",
         element: <NewVideo />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
       },
     ],
   },
