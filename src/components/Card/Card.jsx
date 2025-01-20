@@ -6,7 +6,7 @@ import Button from "../Button/Button";
 import trash from "../../assets/trash.png";
 import pencil from "../../assets/pencil.png";
 
-export default function Card({ id, imagen, color }) {
+export default function Card({ id, imagen, color, openModal }) {
   const { eliminarVideo } = useContext(VideosContext);
 
   const style = {
@@ -32,7 +32,12 @@ export default function Card({ id, imagen, color }) {
           estilo="iconInactive"
           onClick={() => eliminarVideo(id)}
         />
-        <Button texto="EDITAR" logo={pencil} estilo="iconInactive" />
+        <Button
+          texto="EDITAR"
+          logo={pencil}
+          estilo="iconInactive"
+          onClick={() => openModal(id)}
+        />
       </div>
     </div>
   );
@@ -42,4 +47,5 @@ Card.propTypes = {
   id: PropTypes.string.isRequired,
   imagen: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
+  openModal: PropTypes.func.isRequired,
 };

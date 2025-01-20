@@ -14,6 +14,7 @@ export default function VideoProvider({ children }) {
   const [videos, setVideos] = useState([]);
   const [categorias, setCategorias] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [videoToEdit, setVideoToEdit] = useState(null);
 
   const fetchCategorias = async () => {
     try {
@@ -58,11 +59,10 @@ export default function VideoProvider({ children }) {
     }
   };
 
-  const fetchCategoriaById = async (id) => {
+  const getVideoSelected = (id) => {
     try {
-      const data = await getCategorias();
-      const categoria = data.find((categoria) => categoria.id === id);
-      setCategorias((prevCategorias) => [...prevCategorias, categoria]);
+      const video = videos.find((video) => video.id === id);
+      setVideoToEdit(video);
     } catch (error) {
       console.error("Error al obtener categoria", error);
     }
@@ -78,7 +78,8 @@ export default function VideoProvider({ children }) {
         fetchVideos,
         eliminarVideo,
         categorias,
-        fetchCategoriaById,
+        getVideoSelected,
+        videoToEdit,
       }}
     >
       {children}

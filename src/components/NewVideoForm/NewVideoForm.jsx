@@ -1,12 +1,10 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./NewVideoForm.module.css";
 import Button from "../Button/Button";
-import { getCategorias } from "../api/api";
 import { VideosContext } from "../../context/VideoContext";
 
 export default function NewVideoForm() {
-  const [categorias, setCategorias] = useState([]);
   const [titulo, setTitulo] = useState("");
   const [descripcion, setDescripcion] = useState("");
   const [imagen, setImagen] = useState("");
@@ -18,18 +16,9 @@ export default function NewVideoForm() {
   const [imagenError, setImagenError] = useState(false);
   const [videoError, setVideoError] = useState(false);
   const [categoriaError, setCategoriaError] = useState(false);
-  const navigate = useNavigate(); // React Router hook for navigation
+  const navigate = useNavigate();
 
-  const { agregarVideo } = useContext(VideosContext);
-
-  const fetchCategorias = async () => {
-    const data = await getCategorias();
-    setCategorias(data);
-  };
-
-  useEffect(() => {
-    fetchCategorias();
-  }, []);
+  const { agregarVideo, categorias } = useContext(VideosContext);
 
   const guardarVideo = () => {
     if (titulo === "") setTituloError(true);
@@ -158,7 +147,10 @@ export default function NewVideoForm() {
             }
             className={styles.inputText}
             value={video}
-            onChange={(e) => setVideo(e.target.value)}
+            onChange={(e) => {
+              setVideo(e.target.value);
+              setVideoError(false);
+            }}
           />
         </section>
       </div>
@@ -178,7 +170,10 @@ export default function NewVideoForm() {
             }
             className={styles.inputTextMultiline}
             value={descripcion}
-            onChange={(e) => setDescripcion(e.target.value)}
+            onChange={(e) => {
+              setDescripcion(e.target.value);
+              setDescripcionError(false);
+            }}
           ></textarea>
         </section>
       </div>

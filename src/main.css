@@ -5,6 +5,8 @@
   --color-activo: #2271d1;
   --color-inactivo: #ffffff;
   --color-terciario: #d3d3d3;
+  --color-fondo-modal: #03122f;
+  --color-borde-modal: #6bd1ff;
 }
 
 body {

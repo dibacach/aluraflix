@@ -48,6 +48,22 @@
       "imagen": "https://bvtack.com/wp-content/uploads/2019/02/WhatIsLove.p.png",
       "video": "https://www.youtube.com/watch?v=HEXWRTEbj1I",
       "categoria": "1"
+    },
+    {
+      "id": "db2b",
+      "titulo": "El fullstack es pura challa",
+      "descripcion": "test",
+      "imagen": "https://chile.clorox.com/wp-content/uploads/sites/2/2019/05/Copia-de-220224_CBX_CH_CLX_Splashless_Original_950g.png",
+      "video": "https://www.youtube.com/watch?v=HEXWRTEbj1I",
+      "categoria": "2"
+    },
+    {
+      "id": "233c",
+      "titulo": "as",
+      "descripcion": "otro mas",
+      "imagen": "https://cintegral.cl/wp-content/uploads/2022/07/2068-20b-TECLADO-USB-SIN-NUMERICO-GENIUS-LUXEMATE-110.jpg",
+      "video": "https://www.youtube.com/watch?v=HEXWRTEbj1I",
+      "categoria": "2"
     }
   ]
 }

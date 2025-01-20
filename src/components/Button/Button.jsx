@@ -37,6 +37,12 @@ export default function Button({
       color: "var(--color-inactivo)",
       backgroundColor: "var(--color-secundario)",
     },
+    closeButton: {
+      backgroundColor: "var(--color-secundario)",
+      color: "var(--color-inactivo)",
+      width: "52px",
+      height: "52px",
+    },
   };
 
   return (
