@@ -6,7 +6,7 @@ import { VideosContext } from "../../context/VideoContext";
 import close from "../../assets/close.png";
 
 export default function EditVideoModal({ isOpen, onClose, videoToEdit }) {
-  const { categorias } = useContext(VideosContext);
+  const { categorias, actualizarVideo } = useContext(VideosContext);
 
   const [formData, setFormData] = useState({
     titulo: "",
@@ -14,6 +14,14 @@ export default function EditVideoModal({ isOpen, onClose, videoToEdit }) {
     imagen: "",
     video: "",
     categoria: "",
+  });
+
+  const [formDataError, setFormDataError] = useState({
+    titulo: false,
+    descripcion: false,
+    imagen: false,
+    video: false,
+    categoria: false,
   });
 
   useEffect(() => {
@@ -26,51 +34,94 @@ export default function EditVideoModal({ isOpen, onClose, videoToEdit }) {
         categoria: videoToEdit?.categoria || "",
       });
     }
-  }, [videoToEdit]);
 
-  const [tituloError, setTituloError] = useState(false);
-  const [descripcionError, setDescripcionError] = useState(false);
-  const [imagenError, setImagenError] = useState(false);
-  const [videoError, setVideoError] = useState(false);
-  const [categoriaError, setCategoriaError] = useState(false);
+    if (isOpen)
+      setFormDataError({
+        titulo: false,
+        descripcion: false,
+        imagen: false,
+        video: false,
+        categoria: false,
+      });
+  }, [videoToEdit, isOpen]);
 
   if (!isOpen) return null;
 
-  const guardarVideo = () => {
-    console.log("formData", formData);
-    //     if (titulo === "") setTituloError(true);
-    //     else setTituloError(false);
+  const guardarVideo = async () => {
+    if (!formData.titulo)
+      setFormDataError((prev) => ({
+        ...prev,
+        titulo: true,
+      }));
+    else
+      setFormDataError((prev) => ({
+        ...prev,
+        titulo: false,
+      }));
 
-    //     if (descripcion === "") setDescripcionError(true);
-    //     else setDescripcionError(false);
+    if (!formData.descripcion)
+      setFormDataError((prev) => ({
+        ...prev,
+        descripcion: true,
+      }));
+    else
+      setFormDataError((prev) => ({
+        ...prev,
+        descripcion: false,
+      }));
 
-    //     if (imagen === "") setImagenError(true);
-    //     else setImagenError(false);
+    if (!formData.imagen)
+      setFormDataError((prev) => ({
+        ...prev,
+        imagen: true,
+      }));
+    else
+      setFormDataError((prev) => ({
+        ...prev,
+        imagen: false,
+      }));
 
-    //     if (video === "") setVideoError(true);
-    //     else setVideoError(false);
+    if (!formData.video)
+      setFormDataError((prev) => ({
+        ...prev,
+        video: true,
+      }));
+    else
+      setFormDataError((prev) => ({
+        ...prev,
+        video: false,
+      }));
 
-    //     if (categoria === "") setCategoriaError(true);
-    //     else setCategoriaError(false);
+    if (!formData.categoria)
+      setFormDataError((prev) => ({
+        ...prev,
+        categoria: true,
+      }));
+    else
+      setFormDataError((prev) => ({
+        ...prev,
+        categoria: false,
+      }));
 
-    //     if (!titulo || !descripcion || !imagen || !video || !categoria) return;
+    if (
+      !formData.titulo ||
+      !formData.descripcion ||
+      !formData.imagen ||
+      !formData.video ||
+      !formData.categoria
+    )
+      return;
 
-    // const videoEdited = {
-    //   titulo,
-    //   descripcion,
-    //   imagen,
-    //   video,
-    //   categoria,
-    // };
+    await actualizarVideo(videoToEdit.id, formData);
+    onClose();
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log("name", name, "value", value);
-    // setFormData((prev) => ({
-    //   ...prev,
-    //   [name]: value,
-    // }));
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   const limpiarFormulario = () => {
@@ -100,7 +151,9 @@ export default function EditVideoModal({ isOpen, onClose, videoToEdit }) {
         <form className={styles.form}>
           <div className={styles.row}>
             <section
-              className={tituloError ? styles.sectionError : styles.section}
+              className={
+                formDataError.titulo ? styles.sectionError : styles.section
+              }
             >
               <label htmlFor="titulo">Título</label>
               <input
@@ -109,20 +162,24 @@ export default function EditVideoModal({ isOpen, onClose, videoToEdit }) {
                 id="titulo"
                 data-title
                 placeholder={
-                  tituloError ? "El título es obligatorio" : "ingrese el título"
+                  formDataError.titulo
+                    ? "El título es obligatorio"
+                    : "ingrese el título"
                 }
                 className={styles.inputText}
                 value={formData.titulo}
                 onChange={(e) => {
                   handleChange(e);
-                  setTituloError(false);
+                  setFormDataError({ ...formDataError, titulo: false });
                 }}
               />
             </section>
           </div>
           <div className={styles.row}>
             <section
-              className={categoriaError ? styles.sectionError : styles.section}
+              className={
+                formDataError.categoria ? styles.sectionError : styles.section
+              }
             >
               <label htmlFor="categoria">Categoría</label>
               <select
@@ -133,10 +190,10 @@ export default function EditVideoModal({ isOpen, onClose, videoToEdit }) {
                 value={formData.categoria}
                 onChange={(e) => {
                   handleChange(e);
-                  setCategoriaError(false);
+                  setFormDataError({ ...formDataError, categoria: false });
                 }}
                 style={
-                  categoriaError
+                  formDataError.categoria
                     ? { color: "red" }
                     : formData.categoria
                     ? {}
@@ -144,7 +201,7 @@ export default function EditVideoModal({ isOpen, onClose, videoToEdit }) {
                 }
               >
                 <option value="" disabled>
-                  {categoriaError
+                  {formDataError.categoria
                     ? "La categoría es obligatoria"
                     : "Seleccione una categoría"}
                 </option>
@@ -158,7 +215,9 @@ export default function EditVideoModal({ isOpen, onClose, videoToEdit }) {
           </div>
           <div className={styles.row}>
             <section
-              className={imagenError ? styles.sectionError : styles.section}
+              className={
+                formDataError.imagen ? styles.sectionError : styles.section
+              }
             >
               <label htmlFor="imagen">Imagen</label>
               <input
@@ -167,7 +226,7 @@ export default function EditVideoModal({ isOpen, onClose, videoToEdit }) {
                 id="imagen"
                 data-image
                 placeholder={
-                  imagenError
+                  formDataError.imagen
                     ? "El link de la imagen es obligatorio"
                     : "Link de la imagen"
                 }
@@ -175,14 +234,16 @@ export default function EditVideoModal({ isOpen, onClose, videoToEdit }) {
                 value={formData.imagen}
                 onChange={(e) => {
                   handleChange(e);
-                  setImagenError(false);
+                  setFormDataError({ ...formDataError, imagen: false });
                 }}
               />
             </section>
           </div>
           <div className={styles.row}>
             <section
-              className={videoError ? styles.sectionError : styles.section}
+              className={
+                formDataError.video ? styles.sectionError : styles.section
+              }
             >
               <label htmlFor="video">Video</label>
               <input
@@ -191,7 +252,7 @@ export default function EditVideoModal({ isOpen, onClose, videoToEdit }) {
                 id="video"
                 data-video
                 placeholder={
-                  videoError
+                  formDataError.video
                     ? "El link del video es obligatorio"
                     : "Link del video"
                 }
@@ -199,7 +260,7 @@ export default function EditVideoModal({ isOpen, onClose, videoToEdit }) {
                 value={formData.video}
                 onChange={(e) => {
                   handleChange(e);
-                  setVideoError(false);
+                  setFormDataError({ ...formDataError, video: false });
                 }}
               />
             </section>
@@ -207,7 +268,7 @@ export default function EditVideoModal({ isOpen, onClose, videoToEdit }) {
           <div className={styles.row}>
             <section
               className={
-                descripcionError ? styles.sectionError : styles.section
+                formDataError.descripcion ? styles.sectionError : styles.section
               }
             >
               <label htmlFor="descripcion">Descripción</label>
@@ -216,7 +277,7 @@ export default function EditVideoModal({ isOpen, onClose, videoToEdit }) {
                 id="descripcion"
                 data-description
                 placeholder={
-                  descripcionError
+                  formDataError.descripcion
                     ? "La descripción es obligatoria"
                     : "¿De qué se trata este vídeo?"
                 }
@@ -224,7 +285,7 @@ export default function EditVideoModal({ isOpen, onClose, videoToEdit }) {
                 value={formData.descripcion}
                 onChange={(e) => {
                   handleChange(e);
-                  setDescripcionError(false);
+                  setFormDataError({ ...formDataError, descripcion: false });
                 }}
               ></textarea>
             </section>

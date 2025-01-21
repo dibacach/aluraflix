@@ -30,7 +30,7 @@ const router = createBrowserRouter([
 export default function AppRoutes() {
   return (
     <VideoProvider>
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </VideoProvider>
   );
 }

@@ -25,6 +25,7 @@ export default function Banner({ video }) {
           <h1 className={styles.category} style={style}>
             {categoria.nombre.toUpperCase()}
           </h1>
+          <h2>{video.titulo}</h2>
           <p>{video.descripcion}</p>
         </div>
         <img src={video.imagen} alt={video.titulo} className={styles.video} />

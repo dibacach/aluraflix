@@ -18,12 +18,12 @@
   ],
   "videos": [
     {
-      "id": "1",
       "titulo": "Video 1",
-      "categoria": "1",
+      "descripcion": "Baby don't hurt me",
       "imagen": "https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png",
       "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      "descripcion": "Este es un video de prueba"
+      "categoria": "1",
+      "id": "1"
     },
     {
       "id": "2",
@@ -50,12 +50,12 @@
       "categoria": "1"
     },
     {
-      "id": "db2b",
       "titulo": "El fullstack es pura challa",
       "descripcion": "test",
       "imagen": "https://chile.clorox.com/wp-content/uploads/sites/2/2019/05/Copia-de-220224_CBX_CH_CLX_Splashless_Original_950g.png",
       "video": "https://www.youtube.com/watch?v=HEXWRTEbj1I",
-      "categoria": "2"
+      "categoria": "2",
+      "id": "db2b"
     },
     {
       "id": "233c",

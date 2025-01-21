@@ -5,6 +5,7 @@ import {
   deleteVideo,
   createVideo,
   getCategorias,
+  updateVideo,
 } from "../components/api/api";
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -59,6 +60,18 @@ export default function VideoProvider({ children }) {
     }
   };
 
+  const actualizarVideo = async (id, updatedVideo) => {
+    try {
+      updatedVideo.id = id;
+      await updateVideo(updatedVideo);
+      setVideos((prevVideos) =>
+        prevVideos.map((video) => (video.id === id ? updatedVideo : video))
+      );
+    } catch (error) {
+      console.error("Error al actualizar video", error);
+    }
+  };
+
   const getVideoSelected = (id) => {
     try {
       const video = videos.find((video) => video.id === id);
@@ -80,6 +93,7 @@ export default function VideoProvider({ children }) {
         categorias,
         getVideoSelected,
         videoToEdit,
+        actualizarVideo,
       }}
     >
       {children}
