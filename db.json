@@ -18,51 +18,51 @@
   ],
   "videos": [
     {
-      "titulo": "Video 1",
-      "descripcion": "Baby don't hurt me",
-      "imagen": "https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png",
-      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "titulo": "Aprende HTML y CSS - Curso Desde Cero",
+      "descripcion": "En este curso aprenderás los fundamentos de HTML y CSS paso a paso con ejemplos detallados.",
+      "imagen": "https://i.ytimg.com/vi/XqFR2lqBYPs/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLDWMZENrIpXBv8poKoAL4SdHkZfIQ",
+      "video": "https://www.youtube.com/watch?v=XqFR2lqBYPs&list=PL4ONm-ifcbQIGjBqCnF_r02e2K-SyYgv2&index=1",
       "categoria": "1",
       "id": "1"
     },
     {
       "id": "2",
-      "titulo": "Video 2",
+      "titulo": "¿Qué DEBES SABER como Programador BACKEND en 2025?",
       "categoria": "2",
-      "imagen": "https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png",
-      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      "descripcion": "Este es un video de prueba"
+      "imagen": "https://i.ytimg.com/vi/i6K3Vl9kr3g/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDB2DM-DBa1kIMUthH38LCnwLILbw",
+      "video": "https://www.youtube.com/watch?v=i6K3Vl9kr3g",
+      "descripcion": "En este video te diré las cosas obligadas que debes conocer como programador backend en 2025."
     },
     {
       "id": "3",
-      "titulo": "Video 3",
+      "titulo": "Qué es la Gestión de la Innovación",
       "categoria": "3",
-      "imagen": "https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png",
-      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      "descripcion": "Este es un video de prueba"
+      "imagen": "https://i.ytimg.com/vi/wNA9fQhmh1U/hq720.jpg?sqp=-oaymwFBCNAFEJQDSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AHUBoAC4AOKAgwIABABGGUgZShlMA8=&rs=AOn4CLB-iYWv5TYIbjrrLqlTniOaEif5xw",
+      "video": "https://www.youtube.com/watch?v=wNA9fQhmh1U",
+      "descripcion": "Qué es la Gestión de la Innovación"
     },
     {
-      "id": "e5cb",
-      "titulo": "What is love",
-      "descripcion": "love!",
-      "imagen": "https://bvtack.com/wp-content/uploads/2019/02/WhatIsLove.p.png",
-      "video": "https://www.youtube.com/watch?v=HEXWRTEbj1I",
+      "id": "4",
+      "titulo": "Aprende CSS Flexbox - Curso desde Cero",
+      "descripcion": "En este curso aprenderás CSS Flexbox desde cero, incluyendo lo que necesitas saber para comenzar a crear e implementar diseños web responsivos (también conocidos como 'responsive' o adaptables) que se adaptan a dispositivos y pantallas de distintos tamaños.",
+      "imagen": "https://i.ytimg.com/vi/iwFEc6I8wSA/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLDCi8GycvMOxC7HJaiEwtTuGxZ8kw",
+      "video": "https://www.youtube.com/watch?v=iwFEc6I8wSA&list=PL4ONm-ifcbQIGjBqCnF_r02e2K-SyYgv2&index=2",
       "categoria": "1"
     },
     {
-      "titulo": "El fullstack es pura challa",
-      "descripcion": "test",
-      "imagen": "https://chile.clorox.com/wp-content/uploads/sites/2/2019/05/Copia-de-220224_CBX_CH_CLX_Splashless_Original_950g.png",
-      "video": "https://www.youtube.com/watch?v=HEXWRTEbj1I",
+      "titulo": "Que aprender para ser desarrollador backend este 2025?",
+      "descripcion": "Que aprender para ser desarrollador backend este 2025?",
+      "imagen": "https://i.ytimg.com/vi/c7i1kQtAYWw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLD4DbnaqGyLYyVQ_jHIppmOFsCP9Q",
+      "video": "https://www.youtube.com/watch?v=c7i1kQtAYWw",
       "categoria": "2",
-      "id": "db2b"
+      "id": "5"
     },
     {
-      "id": "233c",
-      "titulo": "as",
-      "descripcion": "otro mas",
-      "imagen": "https://cintegral.cl/wp-content/uploads/2022/07/2068-20b-TECLADO-USB-SIN-NUMERICO-GENIUS-LUXEMATE-110.jpg",
-      "video": "https://www.youtube.com/watch?v=HEXWRTEbj1I",
+      "id": "6",
+      "titulo": "¿Cuál es el mejor lenguaje de programación de Backend para ti?",
+      "descripcion": "Si estas considerando dedicarte al desarrollo web Backend profesional, y has visto que hay muchos lenguajes de programación, y no sabes por cual decidirte, en este video te voy a dar una lista de lenguajes que puedes estudiar para obtener un trabajo bien remunerado o seguir avanzando en tu carrera como programador, entre estos lenguajes podemos encontrar a Go, Rust, Java, Javascript, Python, Ruby, y PHP.",
+      "imagen": "https://i.ytimg.com/vi/eymgiK3y2mU/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLD0m9ua4I_r6k3VgW6mN8Cg8Igeww",
+      "video": "https://www.youtube.com/watch?v=eymgiK3y2mU",
       "categoria": "2"
     }
   ]
