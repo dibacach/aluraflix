@@ -64,6 +64,14 @@
       "imagen": "https://i.ytimg.com/vi/eymgiK3y2mU/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLD0m9ua4I_r6k3VgW6mN8Cg8Igeww",
       "video": "https://www.youtube.com/watch?v=eymgiK3y2mU",
       "categoria": "2"
+    },
+    {
+      "titulo": "El desarrollo Frontend es demasiado complicado",
+      "descripcion": "¿Abrumado por la evolución del frontend? En este video, hablo sobre cómo no es necesario aprender todo lo nuevo que sale y la importancia de elegir lo que realmente necesitas.",
+      "imagen": "https://i.ytimg.com/vi/nMXEHfxYaQE/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBjxdFvKawi738j62PmAiH_1N4Ssw",
+      "video": "https://www.youtube.com/watch?v=nMXEHfxYaQE&t",
+      "categoria": "1",
+      "id": "7"
     }
   ]
 }
