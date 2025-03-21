@@ -1,0 +1,69 @@
+{
+  "categorias": [
+    {
+      "id": "1",
+      "nombre": "Frontend",
+      "color": "#6BD1FF"
+    },
+    {
+      "id": "2",
+      "nombre": "Backend",
+      "color": "#00C86F"
+    },
+    {
+      "id": "3",
+      "nombre": "Innovación y Gestión",
+      "color": "#FFBA05"
+    }
+  ],
+  "videos": [
+    {
+      "titulo": "Video 1",
+      "descripcion": "Baby don't hurt me",
+      "imagen": "https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png",
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "categoria": "1",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "titulo": "Video 2",
+      "categoria": "2",
+      "imagen": "https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png",
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "descripcion": "Este es un video de prueba"
+    },
+    {
+      "id": "3",
+      "titulo": "Video 3",
+      "categoria": "3",
+      "imagen": "https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png",
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "descripcion": "Este es un video de prueba"
+    },
+    {
+      "id": "e5cb",
+      "titulo": "What is love",
+      "descripcion": "love!",
+      "imagen": "https://bvtack.com/wp-content/uploads/2019/02/WhatIsLove.p.png",
+      "video": "https://www.youtube.com/watch?v=HEXWRTEbj1I",
+      "categoria": "1"
+    },
+    {
+      "titulo": "El fullstack es pura challa",
+      "descripcion": "test",
+      "imagen": "https://chile.clorox.com/wp-content/uploads/sites/2/2019/05/Copia-de-220224_CBX_CH_CLX_Splashless_Original_950g.png",
+      "video": "https://www.youtube.com/watch?v=HEXWRTEbj1I",
+      "categoria": "2",
+      "id": "db2b"
+    },
+    {
+      "id": "233c",
+      "titulo": "as",
+      "descripcion": "otro mas",
+      "imagen": "https://cintegral.cl/wp-content/uploads/2022/07/2068-20b-TECLADO-USB-SIN-NUMERICO-GENIUS-LUXEMATE-110.jpg",
+      "video": "https://www.youtube.com/watch?v=HEXWRTEbj1I",
+      "categoria": "2"
+    }
+  ]
+}
