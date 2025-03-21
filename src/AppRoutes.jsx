@@ -1,4 +1,3 @@
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import VideoProvider from "./context/VideoContext";
 import Home from "./pages/Home/Home";
@@ -8,7 +7,7 @@ import NotFound from "./pages/NotFound/NotFound";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/aluraflix",
     element: <BasePage />,
     children: [
       {
