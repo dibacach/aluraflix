@@ -47,7 +47,7 @@ export default function NewVideoForm() {
     };
 
     agregarVideo(nuevoVideo);
-    navigate("/");
+    navigate("/aluraflix");
   };
 
   const limpiarFormulario = () => {
