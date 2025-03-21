@@ -7,8 +7,8 @@ export default function Header() {
     <header className={styles.header}>
       <img src={LogoMain} alt="logo" className={styles.logo} />
       <div className={styles.botonera}>
-        <Button texto="HOME" estilo="active" accion="/" />
-        <Button texto="NUEVO VIDEO" accion="/nuevo" />
+        <Button texto="HOME" estilo="active" accion="/aluraflix" />
+        <Button texto="NUEVO VIDEO" accion="/aluraflix/nuevo" />
       </div>
     </header>
   );

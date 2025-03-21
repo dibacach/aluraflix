@@ -7,15 +7,15 @@ import NotFound from "./pages/NotFound/NotFound";
 
 const router = createBrowserRouter([
   {
-    path: "/aluraflix",
+    path: "/",
     element: <BasePage />,
     children: [
       {
-        index: true,
+        path: "/aluraflix",
         element: <Home />,
       },
       {
-        path: "nuevo",
+        path: "/aluraflix/nuevo",
         element: <NewVideo />,
       },
       {
